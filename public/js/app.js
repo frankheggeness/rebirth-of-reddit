@@ -1,11 +1,11 @@
 'use strict';
-// var moment = require('moment');
-// console.log(moment('20111031', 'YYYYMMDD').fromNow());
-// create sticky header
 
-window.onscroll = function() {
-  stickyFunc();
-};
+// var moment = require('moment');
+// moment().format();
+
+window.addEventListener('scroll', stickyFunc);
+// window.addEventListener('scroll', footerSticky);
+let currentSubreddit = '';
 
 let header = document.getElementById('headerBox');
 let sticky = header.offsetTop;
@@ -17,16 +17,31 @@ function stickyFunc() {
     header.classList.remove('sticky');
   }
 }
+// function footerSticky() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add('stickyBottom');
+//   } else {
+//     header.classList.remove('stickyBottom');
+//   }
+// }
 
 // reddit request function below
 
 function sendRequest(subreddit) {
   return function() {
     let request = new XMLHttpRequest();
+    currentSubreddit = subreddit;
     request.open('GET', `https://www.reddit.com/r/${subreddit}/.json?raw_json=1`);
     request.send();
     request.addEventListener('load', getData);
+    postsBox.innerHTML = '';
   };
+}
+function sendRequestInfinite() {
+  let request = new XMLHttpRequest();
+  request.open('GET', `http://www.reddit.com/r/${currentSubreddit}/.json?limit=50&after=t3_10omtd/`);
+  request.send();
+  request.addEventListener('load', getData);
 }
 
 // get data/create posts function below
@@ -34,7 +49,6 @@ function sendRequest(subreddit) {
 function getData() {
   let responseData = JSON.parse(this.responseText);
   let responseChildren = responseData.data.children;
-  postsBox.innerHTML = '';
   console.log(responseChildren);
   for (let i = 0; i < responseChildren.length; i++) {
     // create new postBox
@@ -49,8 +63,19 @@ function getData() {
     if (responseChildren[i].data.thumbnail !== 'self' && responseChildren[i].data.thumbnail !== '') {
       let postImage = document.createElement('img');
       postImage.className = 'postImages';
-      postImage.src = responseChildren[i].data.thumbnail;
-      innerPostBox.appendChild(postImage);
+      if (responseChildren[i].data.url.charAt(responseChildren[i].data.url.length - 1) === 'g') {
+        postImage.src = responseChildren[i].data.url;
+      } else if (
+        responseChildren[i].data.url.charAt(responseChildren[i].data.url.length - 1) !== 'g' &&
+        responseChildren[i].data.thumbnail.charAt(responseChildren[i].data.thumbnail.length - 1) === 'g'
+      ) {
+        postImage.src = responseChildren[i].data.thumbnail;
+      }
+
+      if (this.status === 200) {
+        innerPostBox.appendChild(postImage);
+      }
+      // innerPostBox.appendChild(postImage);
     }
 
     // add title
@@ -64,10 +89,12 @@ function getData() {
     statsBox.className = 'postStats';
     // grab author,date, upvotes
     let author = responseChildren[i].data.author;
+    let date = new Date(responseChildren[i].data.created * 1000);
+    let newDateStr = date.toString();
+    let newDate = newDateStr.substr(0, 15);
     // let date = moment(responseChildren[i].data.created, 'YYYYMMDD');
-    // console.log(date);
     let upvotes = responseChildren[i].data.score;
-    statsBox.innerHTML = `By : ${author} ●  DATE HERE  ● Upvotes: ${upvotes}`;
+    statsBox.innerHTML = `By : ${author} ●  ${newDate}  ● Upvotes: ${upvotes}`;
 
     // add post content
     let postContent = document.createElement('div');
@@ -75,7 +102,7 @@ function getData() {
     let fullParagraph = responseChildren[i].data.selftext;
     let fullPostContent = document.createElement('div');
     if (fullParagraph !== '') {
-      var reducedParagraph = fullParagraph.substr(0, 175);
+      let reducedParagraph = fullParagraph.substr(0, 175);
       postContent.innerHTML = reducedParagraph + '...';
       // postContent.innerHTML = fullParagraph;
       // full contentstuff below
@@ -94,41 +121,25 @@ function getData() {
 function showFull() {
   fullPostContent.style.display = 'block';
 }
-// function showLess(){
-
-// }
-
 // add click event to nav bar
 
 surfNav.addEventListener('click', sendRequest('surfing'));
 spaceNav.addEventListener('click', sendRequest('astrophotography'));
 hawaiiNav.addEventListener('click', sendRequest('hawaii'));
-randomNav.addEventListener('click', randomNumGener());
+randomNav.addEventListener('click', randomSubRedditFunc);
 
-// random subreddit generator below
-
-// function randomSub() {
-//   let randomSubArray = ['pic', 'EarthPorn', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
-//   let randomNum = Math.floor(Math.random() * 7);
-
-//   return randomSubArray[Math.floor(Math.random() * 7)];
-// }
-// function getSub() {
-//   return randomSub();
-// }
-function randomNumGener() {
-  postsBox.innerHTML = '';
+function randomSubRedditFunc() {
   let randomSubArray = ['pic', 'EarthPorn', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
-  let randomNum = Math.floor(Math.random() * 7);
-  let newTopic = randomSubArray[randomNum];
-  console.log(newTopic);
-  return sendRequest(newTopic);
+  let randomize = randomSubArray[Math.floor(Math.random() * randomSubArray.length)];
+
+  sendRequest(randomize)();
 }
 
-// endless scroll attempt
+// // endless scroll attempt
 // window.onscroll = function(ev) {
 //   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-//     loadMore();
+//     console.log('test');
+//     sendRequestInfinite();
 //   }
 // };
 
