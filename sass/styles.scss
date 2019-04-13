@@ -11,6 +11,25 @@
   background-color: white;
 }
 
+#searchBar {
+  border: 2px solid #b64326;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-family: 'Oswald', sans-serif;
+}
+#searchButton {
+  background-color: #b64326;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 148px;
+  border-radius: 4px;
+}
+
 #title {
   font-family: 'Oswald', sans-serif;
   color: black;
