@@ -46,7 +46,7 @@ function getData() {
     newPost.appendChild(innerPostBox);
 
     // add image
-    if (responseChildren[i].data.thumbnail !== 'self') {
+    if (responseChildren[i].data.thumbnail !== 'self' && responseChildren[i].data.thumbnail !== '') {
       let postImage = document.createElement('img');
       postImage.className = 'postImages';
       postImage.src = responseChildren[i].data.thumbnail;
@@ -71,16 +71,32 @@ function getData() {
 
     // add post content
     let postContent = document.createElement('div');
-    postContent.className = 'postContent';
+    postContent.className = 'partPostContent';
     let fullParagraph = responseChildren[i].data.selftext;
+    let fullPostContent = document.createElement('div');
     if (fullParagraph !== '') {
-      var reducedParagraph = fullParagraph.substr(0, 150);
+      var reducedParagraph = fullParagraph.substr(0, 175);
       postContent.innerHTML = reducedParagraph + '...';
+      // postContent.innerHTML = fullParagraph;
+      // full contentstuff below
+      fullPostContent.className = 'fullPostContent';
+      fullPostContent.innerHTML = fullParagraph;
+      fullPostContent.style.display = 'none';
+      postContent.addEventListener('click', showFull);
     }
+
     innerPostBox.appendChild(statsBox);
     innerPostBox.appendChild(postContent);
+    innerPostBox.appendChild(fullPostContent);
   }
 }
+
+function showFull() {
+  fullPostContent.style.display = 'block';
+}
+// function showLess(){
+
+// }
 
 // add click event to nav bar
 
@@ -101,10 +117,10 @@ function getSub() {
 }
 
 // endless scroll attempt
-window.onscroll = function(ev) {
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    loadMore();
-  }
-};
+// window.onscroll = function(ev) {
+//   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+//     loadMore();
+//   }
+// };
 
-function loadMore() {}
+// function loadMore() {}
