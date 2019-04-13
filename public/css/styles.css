@@ -1,17 +1,21 @@
 @media only screen and (min-width: 1024px) {
   .header {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBB%0D%0AZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9u%0D%0AOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBT%0D%0AVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzEx%0D%0ALmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3%0D%0ALnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxp%0D%0AbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDEwcHgiIGhlaWdodD0iMTBweCIgdmlld0Jv%0D%0AeD0iMCAwIDQxMCAxMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDEwIDEwIiB4bWw6c3Bh%0D%0AY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGQkIwNDAiIHBvaW50cz0iNC43%0D%0AMzUsNSAxMzQuMjY3LDYuMjA1IDEzNC4yNjcsMy43OTYgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiNG%0D%0AQkIwNDAiIHBvaW50cz0iNDA1LjI2NSw1IDI3NS43MzMsMy43OTUgMjc1LjczMyw2LjIwNCAJIi8+%0D%0ADQo8L2c+DQo8L3N2Zz4NCg==);
+    background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; }
-  #top-header {
-    text-align: center; }
-  .fa-plus-square {
-    top: 3%;
-    left: 100%;
+  #headerStripe {
     position: absolute;
-    font-size: 4em;
-    color: #be4a38; }
+    text-align: center; }
+  #top-header {
+    display: flex;
+    justify-content: space-between; }
+  .topBox {
+    height: 80px;
+    width: 150px; }
+  #inputBox {
+    display: inline; }
   #logo {
     width: 125px;
     height: 75px; }
@@ -110,7 +114,7 @@
   #footerBox {
     display: none; } }
 
-@media only screen and (min-width: 425px) {
+@media only screen and (max-width: 1023px) {
   .header {
     padding: 10px 16px;
     color: #f1f1f1;
@@ -166,6 +170,24 @@
   margin-right: 0%;
   top: 0px;
   background-color: white; }
+
+#searchBar {
+  border: 2px solid #b64326;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-family: 'Oswald', sans-serif; }
+
+#searchButton {
+  background-color: #b64326;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 148px;
+  border-radius: 4px; }
 
 #title {
   font-family: 'Oswald', sans-serif;
