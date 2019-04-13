@@ -10,13 +10,7 @@
   top: 0px;
   background-color: white;
 }
-.fa-plus-square {
-  left: 90%;
-  position: absolute;
-  font-size: 2.5em;
-  color: #be4a38;
-  // padding: 5px;
-}
+
 #title {
   font-family: 'Oswald', sans-serif;
   color: black;
@@ -32,11 +26,7 @@
   top: 0;
   width: 100%;
 }
-// .stickyBottom {
-//   position: fixed;
-//   bottom: 0;
-//   width: 100%;
-// }
+
 body {
   background-image: url(https://raw.githubusercontent.com/frankheggeness/rebirth-of-reddit/master/assets/bg.jpg);
   margin: 0;
@@ -48,10 +38,42 @@ body {
 }
 
 #footerBox {
-  bottom: 0;
-  background-color: #403641;
-  position: absolute;
+  // bottom: 0;
+  // background-color: #403641;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  // height: 20px; /* Height of the footer */
+  position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
-  height: 20px; /* Height of the footer */
+  background-color: #3a3a3c;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  color: #818285;
+}
+.postBox {
+  border: 5px solid transparent;
+}
+.fa-instagram {
+  margin: 3px;
+}
+.fa-facebook {
+  margin: 3px;
+}
+
+.fa-instagram:hover {
+  color: #be4a38;
+}
+.fa-facebook-square:hover {
+  color: #be4a38;
+}
+
+.postBox:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ef931d;
 }

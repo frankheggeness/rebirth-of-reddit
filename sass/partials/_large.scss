@@ -8,12 +8,25 @@
   #top-header {
     text-align: center;
   }
+
+  .fa-plus-square {
+    top: 3%;
+    left: 100%;
+    position: absolute;
+    font-size: 4em;
+    color: #be4a38;
+    // padding: 5px;
+  }
+  #logo {
+    width: 125px;
+    height: 75px;
+  }
   #navBox {
-    background-color: #403641;
+    background-color: #3a3a3c;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: 'Oswald', sans-serif;
-    color: #837a83;
+    color: #808184;
 
     .navBar {
       // border-width: 1px;
@@ -22,7 +35,7 @@
       padding: 10px;
     }
     .navBar:hover {
-      color: #be4a38;
+      color: #e8562a;
     }
   }
   #postsBox {
