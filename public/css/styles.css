@@ -21,11 +21,10 @@
   justify-content: space-between;
   font-family: 'Oswald', sans-serif;
   color: #706470; }
-
-.navBar {
-  border-width: 1px;
-  border-left-style: solid;
-  border-right-style: solid; }
+  #navBox .navBar {
+    padding: 10px; }
+  #navBox .navBar:hover {
+    color: #be4a38; }
 
 .content {
   padding: 16px; }
@@ -42,7 +41,28 @@ body {
   background-image: url(https://raw.githubusercontent.com/frankheggeness/rebirth-of-reddit/master/assets/bg.jpg);
   margin: 0; }
 
-.postBox {
-  background-color: white;
-  padding: 5px;
-  margin: 8px; }
+@media only screen and (max-width: 450px) {
+  .postBox {
+    background-color: white;
+    padding: 5px;
+    margin: 8px;
+    font-family: 'Lato', sans-serif; }
+    .postBox .innerPostBox {
+      padding: 5px;
+      margin: 8px; }
+      .postBox .innerPostBox .postTitles {
+        font-weight: bold;
+        font-size: 25px;
+        color: #292828; }
+      .postBox .innerPostBox .postImages {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 375px;
+        height: 225px; }
+      .postBox .innerPostBox .postStats {
+        color: #b9b8b8;
+        text-align: center; }
+      .postBox .innerPostBox .postContent {
+        text-overflow: ellipsis;
+        word-wrap: break-word; } }

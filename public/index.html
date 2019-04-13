@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Lato" rel="stylesheet" />
   </head>
   <body>
     <header class="headerBox" id="headerBox">
@@ -17,15 +17,20 @@
         />
       </div>
       <div id="navBox">
-        <div class="navBar">Surfing</div>
-        <div class="navBar">NBA</div>
-        <div class="navBar">Hawaii</div>
-        <div class="navBar">Random</div>
+        <div class="navBar" id="surfNav">Surfing</div>
+        <div class="navBar" id="spaceNav">Space</div>
+        <div class="navBar" id="hawaiiNav">Hawaii</div>
+        <div class="navBar" id="randomNav">Random</div>
       </div>
     </header>
 
     <div id="postsBox"></div>
 
     <script src="js/app.js"></script>
+
+    <!-- <script src="moment.js"></script>
+    <script>
+      moment().format();
+    </script> -->
   </body>
 </html>
