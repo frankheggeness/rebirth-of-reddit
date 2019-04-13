@@ -6,16 +6,25 @@
     background-position: center; }
   #top-header {
     text-align: center; }
+  .fa-plus-square {
+    top: 3%;
+    left: 100%;
+    position: absolute;
+    font-size: 4em;
+    color: #be4a38; }
+  #logo {
+    width: 125px;
+    height: 75px; }
   #navBox {
-    background-color: #403641;
+    background-color: #3a3a3c;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: 'Oswald', sans-serif;
-    color: #837a83; }
+    color: #808184; }
     #navBox .navBar {
       padding: 10px; }
     #navBox .navBar:hover {
-      color: #be4a38; }
+      color: #e8562a; }
   #postsBox {
     display: flex;
     flex-wrap: wrap;
@@ -64,15 +73,15 @@
     font-size: 2.5em;
     color: #be4a38; }
   #navBox {
-    background-color: #403641;
+    background-color: #3a3a3c;
     display: flex;
     justify-content: space-between;
     font-family: 'Oswald', sans-serif;
-    color: #706470; }
+    color: #808184; }
     #navBox .navBar {
       padding: 10px; }
     #navBox .navBar:hover {
-      color: #be4a38; }
+      color: #e8562a; }
   .postBox {
     background-color: white;
     padding: 5px;
@@ -91,13 +100,15 @@
         margin-left: auto;
         margin-right: auto;
         width: 275px;
-        height: 125px; }
+        height: 175px; }
       .postBox .innerPostBox .postStats {
         color: #b9b8b8;
         text-align: center; }
       .postBox .innerPostBox .partPostContent {
         text-overflow: auto;
-        word-wrap: break-word; } }
+        word-wrap: break-word; }
+  #footerBox {
+    display: none; } }
 
 @media only screen and (min-width: 425px) {
   .header {
@@ -113,15 +124,15 @@
     font-size: 2.5em;
     color: #be4a38; }
   #navBox {
-    background-color: #403641;
+    background-color: #3a3a3c;
     display: flex;
     justify-content: space-between;
     font-family: 'Oswald', sans-serif;
-    color: #706470; }
+    color: #808184; }
     #navBox .navBar {
       padding: 10px; }
     #navBox .navBar:hover {
-      color: #be4a38; }
+      color: #e8562a; }
   .postBox {
     background-color: white;
     padding: 5px;
@@ -156,12 +167,6 @@
   top: 0px;
   background-color: white; }
 
-.fa-plus-square {
-  left: 90%;
-  position: absolute;
-  font-size: 2.5em;
-  color: #be4a38; }
-
 #title {
   font-family: 'Oswald', sans-serif;
   color: black;
@@ -184,10 +189,33 @@ body {
   padding-top: 102px; }
 
 #footerBox {
-  bottom: 0;
-  background-color: #403641;
-  position: absolute;
+  position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
-  height: 20px;
-  /* Height of the footer */ }
+  background-color: #3a3a3c;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  color: #818285; }
+
+.postBox {
+  border: 5px solid transparent; }
+
+.fa-instagram {
+  margin: 3px; }
+
+.fa-facebook {
+  margin: 3px; }
+
+.fa-instagram:hover {
+  color: #be4a38; }
+
+.fa-facebook-square:hover {
+  color: #be4a38; }
+
+.postBox:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ef931d; }

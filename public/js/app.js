@@ -59,10 +59,19 @@ function getData() {
     innerPostBox.className = 'innerPostBox';
     newPost.appendChild(innerPostBox);
 
+    let imageLink = responseChildren[i].data.url;
     // add image
-    if (responseChildren[i].data.thumbnail !== 'self' && responseChildren[i].data.thumbnail !== '') {
-      let postImage = document.createElement('img');
-      postImage.className = 'postImages';
+    let postImage = document.createElement('img');
+    postImage.className = 'postImages';
+    if (
+      imageLink.search('imgur') !== -1 ||
+      responseChildren[i].data.thumbnail === '' ||
+      responseChildren[i].data.thumbnail === 'self'
+    ) {
+      console.log('found imgur');
+      postImage.src = 'https://s.newsweek.com/sites/www.newsweek.com/files/styles/full/public/2018/09/28/reddit.png';
+      innerPostBox.appendChild(postImage);
+    } else if (responseChildren[i].data.thumbnail !== 'self' && responseChildren[i].data.thumbnail !== '') {
       if (responseChildren[i].data.url.charAt(responseChildren[i].data.url.length - 1) === 'g') {
         postImage.src = responseChildren[i].data.url;
       } else if (
@@ -75,7 +84,6 @@ function getData() {
       if (this.status === 200) {
         innerPostBox.appendChild(postImage);
       }
-      // innerPostBox.appendChild(postImage);
     }
 
     // add title
@@ -125,11 +133,11 @@ function showFull() {
 
 surfNav.addEventListener('click', sendRequest('surfing'));
 spaceNav.addEventListener('click', sendRequest('astrophotography'));
-hawaiiNav.addEventListener('click', sendRequest('hawaii'));
+earthNav.addEventListener('click', sendRequest('EarthPorn'));
 randomNav.addEventListener('click', randomSubRedditFunc);
 
 function randomSubRedditFunc() {
-  let randomSubArray = ['pic', 'EarthPorn', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
+  let randomSubArray = ['pic', 'hawaii', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
   let randomize = randomSubArray[Math.floor(Math.random() * randomSubArray.length)];
 
   sendRequest(randomize)();
