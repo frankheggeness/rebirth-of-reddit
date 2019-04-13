@@ -1,0 +1,69 @@
+@media only screen and (min-width: 425px) {
+  .header {
+    padding: 10px 16px;
+    color: #f1f1f1;
+    margin-left: 0%;
+    margin-right: 0%;
+    top: 0px;
+    background-color: white;
+  }
+  .fa-plus-square {
+    left: 90%;
+    position: absolute;
+    font-size: 2.5em;
+    color: #be4a38;
+    // padding: 5px;
+  }
+  #navBox {
+    background-color: #403641;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Oswald', sans-serif;
+    color: #706470;
+
+    .navBar {
+      // border-width: 1px;
+      // border-left-style: solid;
+      // border-right-style: solid;
+      padding: 10px;
+    }
+    .navBar:hover {
+      color: #be4a38;
+    }
+  }
+  .postBox {
+    background-color: white;
+    padding: 5px;
+    margin: 8px;
+    font-family: 'Lato', sans-serif;
+
+    // max-height: 100px;
+    // height: 400px;
+    .innerPostBox {
+      padding: 5px;
+      margin: 8px;
+      .postTitles {
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(41, 40, 40);
+        word-wrap: break-word;
+      }
+      .postImages {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 375px;
+        height: 225px;
+      }
+      .postStats {
+        color: #b9b8b8;
+        text-align: center;
+      }
+      .partPostContent {
+        text-overflow: auto;
+        word-wrap: break-word;
+        // max-height: 100px;
+      }
+    }
+  }
+}
