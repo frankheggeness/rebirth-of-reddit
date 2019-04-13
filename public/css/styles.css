@@ -34,7 +34,12 @@ body {
 
 @media only screen and (min-width: 855px) {
   .header {
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBB%0D%0AZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9u%0D%0AOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBT%0D%0AVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzEx%0D%0ALmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3%0D%0ALnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxp%0D%0AbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDEwcHgiIGhlaWdodD0iMTBweCIgdmlld0Jv%0D%0AeD0iMCAwIDQxMCAxMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDEwIDEwIiB4bWw6c3Bh%0D%0AY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGQkIwNDAiIHBvaW50cz0iNC43%0D%0AMzUsNSAxMzQuMjY3LDYuMjA1IDEzNC4yNjcsMy43OTYgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiNG%0D%0AQkIwNDAiIHBvaW50cz0iNDA1LjI2NSw1IDI3NS43MzMsMy43OTUgMjc1LjczMyw2LjIwNCAJIi8+%0D%0ADQo8L2c+DQo8L3N2Zz4NCg==); }
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBB%0D%0AZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9u%0D%0AOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBT%0D%0AVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzEx%0D%0ALmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3%0D%0ALnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxp%0D%0AbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDEwcHgiIGhlaWdodD0iMTBweCIgdmlld0Jv%0D%0AeD0iMCAwIDQxMCAxMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDEwIDEwIiB4bWw6c3Bh%0D%0AY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiNGQkIwNDAiIHBvaW50cz0iNC43%0D%0AMzUsNSAxMzQuMjY3LDYuMjA1IDEzNC4yNjcsMy43OTYgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiNG%0D%0AQkIwNDAiIHBvaW50cz0iNDA1LjI2NSw1IDI3NS43MzMsMy43OTUgMjc1LjczMyw2LjIwNCAJIi8+%0D%0ADQo8L2c+DQo8L3N2Zz4NCg==);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; }
+  #top-header {
+    text-align: center; }
   #navBox {
     background-color: #403641;
     display: flex;
@@ -48,7 +53,10 @@ body {
   #postsBox {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; }
+    justify-content: space-around;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto; }
   .postBox {
     background-color: white;
     padding: 5px;
@@ -61,7 +69,8 @@ body {
       .postBox .innerPostBox .postTitles {
         font-weight: bold;
         font-size: 25px;
-        color: #292828; }
+        color: #292828;
+        word-wrap: break-word; }
       .postBox .innerPostBox .postImages {
         display: block;
         margin-left: auto;
@@ -109,7 +118,8 @@ body {
       .postBox .innerPostBox .postTitles {
         font-weight: bold;
         font-size: 25px;
-        color: #292828; }
+        color: #292828;
+        word-wrap: break-word; }
       .postBox .innerPostBox .postImages {
         display: block;
         margin-left: auto;

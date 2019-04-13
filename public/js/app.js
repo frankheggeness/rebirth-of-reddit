@@ -103,17 +103,26 @@ function showFull() {
 surfNav.addEventListener('click', sendRequest('surfing'));
 spaceNav.addEventListener('click', sendRequest('astrophotography'));
 hawaiiNav.addEventListener('click', sendRequest('hawaii'));
-randomNav.addEventListener('click', sendRequest(getSub()));
+randomNav.addEventListener('click', randomNumGener());
 
 // random subreddit generator below
 
-function randomSub() {
+// function randomSub() {
+//   let randomSubArray = ['pic', 'EarthPorn', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
+//   let randomNum = Math.floor(Math.random() * 7);
+
+//   return randomSubArray[Math.floor(Math.random() * 7)];
+// }
+// function getSub() {
+//   return randomSub();
+// }
+function randomNumGener() {
+  postsBox.innerHTML = '';
   let randomSubArray = ['pic', 'EarthPorn', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
   let randomNum = Math.floor(Math.random() * 7);
-  return randomSubArray[randomNum];
-}
-function getSub() {
-  return randomSub();
+  let newTopic = randomSubArray[randomNum];
+  console.log(newTopic);
+  return sendRequest(newTopic);
 }
 
 // endless scroll attempt
