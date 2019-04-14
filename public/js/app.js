@@ -17,13 +17,6 @@ function stickyFunc() {
     header.classList.remove('sticky');
   }
 }
-// function footerSticky() {
-//   if (window.pageYOffset > sticky) {
-//     header.classList.add('stickyBottom');
-//   } else {
-//     header.classList.remove('stickyBottom');
-//   }
-// }
 
 // reddit request function below
 
@@ -31,6 +24,7 @@ function sendRequest(subreddit) {
   return function() {
     let request = new XMLHttpRequest();
     currentSubreddit = subreddit;
+    // console.log(subreddit);
     request.open('GET', `https://www.reddit.com/r/${subreddit}/.json?raw_json=1`);
     request.send();
     request.addEventListener('load', getData);
@@ -39,7 +33,7 @@ function sendRequest(subreddit) {
 }
 function sendRequestInfinite() {
   let request = new XMLHttpRequest();
-  request.open('GET', `http://www.reddit.com/r/${currentSubreddit}/.json?limit=50&after=t3_10omtd/`);
+  request.open('GET', `http://www.reddit.com/r/${currentSubreddit}/.json?limit=25&after=t3_10omtd/`);
   request.send();
   request.addEventListener('load', getData);
 }
@@ -68,7 +62,6 @@ function getData() {
       responseChildren[i].data.thumbnail === '' ||
       responseChildren[i].data.thumbnail === 'self'
     ) {
-      console.log('found imgur');
       postImage.src = 'https://s.newsweek.com/sites/www.newsweek.com/files/styles/full/public/2018/09/28/reddit.png';
       innerPostBox.appendChild(postImage);
     } else if (responseChildren[i].data.thumbnail !== 'self' && responseChildren[i].data.thumbnail !== '') {
@@ -89,6 +82,7 @@ function getData() {
     // add title
     let postTitle = document.createElement('div');
     postTitle.className = 'postTitles';
+    let title = responseChildren[i].data.title;
     postTitle.innerHTML = responseChildren[i].data.title;
     innerPostBox.appendChild(postTitle);
 
@@ -137,18 +131,33 @@ earthNav.addEventListener('click', sendRequest('EarthPorn'));
 randomNav.addEventListener('click', randomSubRedditFunc);
 
 function randomSubRedditFunc() {
-  let randomSubArray = ['pic', 'hawaii', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
+  let randomSubArray = ['pics', 'hawaii', 'FoodPorn', 'askReddit', 'dogswithjobs', 'nba', 'javascript'];
   let randomize = randomSubArray[Math.floor(Math.random() * randomSubArray.length)];
 
   sendRequest(randomize)();
 }
 
 // // endless scroll attempt
-// window.onscroll = function(ev) {
-//   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-//     console.log('test');
-//     sendRequestInfinite();
-//   }
-// };
+window.onscroll = function(ev) {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    console.log('test');
+    sendRequestInfinite();
+  }
+};
 
 // function loadMore() {}
+
+// search function below
+let searchBarBig = document.getElementById('searchBarBig');
+searchButtonBig.addEventListener('click', searchFunctionBig);
+searchButtonSmall.addEventListener('click', searchFunctionSmall);
+
+function searchFunctionBig() {
+  let input = searchBarBig.value;
+  sendRequest(input)();
+}
+
+function searchFunctionSmall() {
+  let input = searchBarSmall.value;
+  sendRequest(input)();
+}
