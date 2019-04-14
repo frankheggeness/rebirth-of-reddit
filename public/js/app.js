@@ -83,8 +83,16 @@ function getData() {
     let postTitle = document.createElement('div');
     postTitle.className = 'postTitles';
     let title = responseChildren[i].data.title;
-    postTitle.innerHTML = responseChildren[i].data.title;
-    innerPostBox.appendChild(postTitle);
+    let titleArray = title.split('');
+    if (titleArray.length > 55) {
+      let newTitle = title.substr(0, 55);
+      // postTitle.innerHTML = responseChildren[i].data.title;
+      postTitle.innerHTML = newTitle + '...';
+      innerPostBox.appendChild(postTitle);
+    } else {
+      postTitle.innerHTML = title;
+      innerPostBox.appendChild(postTitle);
+    }
 
     // add author/date/upvotes container
     let statsBox = document.createElement('div');
