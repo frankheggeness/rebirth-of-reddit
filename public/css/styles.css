@@ -34,7 +34,8 @@
       padding: 10px;
       font-size: 20px; }
     #navBox .navBar:hover {
-      color: #e8562a; }
+      color: #e8562a;
+      cursor: pointer; }
   #postsBox {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +103,8 @@
     #navBox .navBar {
       padding: 10px; }
     #navBox .navBar:hover {
-      color: #e8562a; }
+      color: #e8562a;
+      cursor: pointer; }
   .postBox {
     background-color: white;
     padding: 5px;
@@ -160,7 +162,8 @@
     #navBox .navBar {
       padding: 10px; }
     #navBox .navBar:hover {
-      color: #e8562a; }
+      color: #e8562a;
+      cursor: pointer; }
   .postBox {
     background-color: white;
     padding: 5px;
@@ -231,6 +234,14 @@
   width: 148px;
   border-radius: 4px; }
 
+#searchButtonBig:hover {
+  background-color: #ef931d;
+  cursor: pointer; }
+
+#searchButtonSmall:hover {
+  background-color: #ef931d;
+  cursor: pointer; }
+
 #title {
   font-family: 'Oswald', sans-serif;
   color: black;
@@ -274,10 +285,12 @@ body {
   margin: 3px; }
 
 .fa-instagram:hover {
-  color: #be4a38; }
+  color: #be4a38;
+  cursor: pointer; }
 
 .fa-facebook-square:hover {
-  color: #be4a38; }
+  color: #be4a38;
+  cursor: pointer; }
 
 .postBox:hover {
   border-style: solid;
@@ -285,4 +298,32 @@ body {
   border-color: #ef931d; }
 
 .fa-plus-square:hover {
-  color: red; }
+  color: #ef931d;
+  cursor: pointer; }
+
+#userContainer {
+  display: none;
+  text-align: center; }
+
+.user {
+  background-color: #b64326;
+  border: solid;
+  border-color: #3a3a3c;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  width: 148px;
+  border-radius: 4px;
+  justify-content: space-between;
+  font-family: 'Oswald', sans-serif; }
+
+.user:hover {
+  border-color: #ef931d;
+  cursor: pointer; }
+
+#squareBoxSmall {
+  font-family: 'Oswald', sans-serif;
+  color: #b64326; }

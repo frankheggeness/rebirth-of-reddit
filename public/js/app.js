@@ -1,5 +1,7 @@
 'use strict';
 
+// import { brotliDecompressSync } from 'zlib';
+
 // var moment = require('moment');
 // moment().format();
 
@@ -169,3 +171,26 @@ function searchFunctionSmall() {
   let input = searchBarSmall.value;
   sendRequest(input)();
 }
+
+// user settings open
+
+let squareBox = document.getElementById('squareBox');
+
+squareBox.addEventListener('click', showUser);
+
+function showUser() {
+  postsBox.innerHTML = '';
+  userContainer.style.display = 'block';
+}
+
+let closeButton = document.getElementById('closeButton');
+
+closeButton.addEventListener('click', showPosts);
+
+function showPosts() {
+  userContainer.style.display = 'none';
+  // postsBox.innerHTML = '';
+}
+
+let squareBoxSmall = document.getElementById('squareBoxSmall');
+squareBoxSmall.addEventListener('click', showUser);
