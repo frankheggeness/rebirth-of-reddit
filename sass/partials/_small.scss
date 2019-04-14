@@ -7,12 +7,24 @@
     top: 0px;
     background-color: white;
   }
+
+  #inputBoxBig {
+    height: 80px;
+    width: 150px;
+    // display: flex;
+    // align-self: flex-start;
+    display: none;
+  }
+  #squareBox {
+    display: none;
+  }
   .fa-plus-square {
     left: 90%;
     position: absolute;
     font-size: 2.5em;
     color: #be4a38;
     // padding: 5px;
+    display: none;
   }
   #navBox {
     background-color: #3a3a3c;

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1000px) {
   .header {
     padding: 10px 16px;
     color: #f1f1f1;
@@ -6,17 +6,39 @@
     margin-right: 0%;
     top: 0px;
     background-color: white;
+    display: flex;
+    // align-items: flex-end;
+    justify-content: space-between;
   }
 
-  // #inputBox {
-  //   display: none;
-  // }
+  #inputBoxBig {
+    height: 80px;
+    width: 150px;
+    // display: flex;
+    // align-self: flex-start;
+    display: none;
+  }
+  #inputBoxSmall {
+    height: 80px;
+    width: 150px;
+    // display: flex;
+    // align-self: flex-start;
+    // display: flex;
+  }
+
+  #squareBox {
+    display: none;
+  }
   .fa-plus-square {
-    left: 90%;
-    position: absolute;
-    font-size: 2.5em;
+    // left: 90%;
+    // position: absolute;
+    font-size: 1.5em;
     color: #be4a38;
     // padding: 5px;
+  }
+  #squareBoxSmall {
+    display: flex;
+    align-items: flex-start;
   }
   #navBox {
     background-color: #3a3a3c;
