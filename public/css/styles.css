@@ -327,3 +327,36 @@ body {
 #squareBoxSmall {
   font-family: 'Oswald', sans-serif;
   color: #b64326; }
+
+#settingsBox {
+  display: block;
+  text-align: center; }
+
+#slideBox {
+  display: none;
+  text-align: center; }
+
+.slidecontainer {
+  width: 50%;
+  /* Width of the outside container */
+  text-align: center; }
+
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #ef931d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s; }
+
+.settingsText {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px; }
+
+#pleaseCenter {
+  display: inline-block;
+  text-align: center; }

@@ -36,9 +36,9 @@
         </div>
       </div>
       <div id="navBox">
-        <div class="navBar" id="surfNav">Surfing</div>
-        <div class="navBar" id="spaceNav">SpacePics</div>
-        <div class="navBar" id="earthNav">EarthPics</div>
+        <div class="navBar" id="surfNav">r/Surfing</div>
+        <div class="navBar" id="spaceNav">r/SpacePics</div>
+        <div class="navBar" id="earthNav">r/EarthPics</div>
         <div class="navBar" id="randomNav">Random</div>
       </div>
     </header>
@@ -47,9 +47,21 @@
     <div id="userContainer">
       <div><button class="user" id="closeButton">Close</button></div>
       <div><button class="user">Profile</button></div>
-      <div><button class="user">Settings</button></div>
+      <div><button class="user" id="settingsButton">Settings</button></div>
       <div><button class="user">Help</button></div>
       <div><button class="user">Log Out</button></div>
+    </div>
+
+    <div id="settingsBox">
+      <div id="pleaseCenter">
+        <div class="slidecontainer" id="slideBox">
+          <input type="range" min="12" max="35" value="20" class="slider" id="fontSlider" />
+          <div class="settingsText" id="testFont"></div>
+          <button class="user" id="changeFontButton">Change Font Size</button>
+          <button class="user" id="changeBackground">Switch to Better Background</button>
+          <button class="user" id="backToSettings">Back to Settings</button>
+        </div>
+      </div>
     </div>
 
     <footer class="footerBox" id="footerBox">
