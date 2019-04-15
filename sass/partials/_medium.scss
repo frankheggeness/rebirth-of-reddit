@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) and (min-width: 425px) {
   .header {
     padding: 10px 16px;
     color: #f1f1f1;
@@ -37,8 +37,8 @@
     // padding: 5px;
   }
   #squareBoxSmall {
-    display: flex;
-    align-items: flex-start;
+    // display: flex;
+    // align-items: flex-start;
   }
   #navBox {
     background-color: #3a3a3c;
@@ -55,6 +55,7 @@
     }
     .navBar:hover {
       color: #e8562a;
+      cursor: pointer;
     }
   }
   .postBox {

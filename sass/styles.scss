@@ -47,6 +47,14 @@
   width: 148px;
   border-radius: 4px;
 }
+#searchButtonBig:hover {
+  background-color: #ef931d;
+  cursor: pointer;
+}
+#searchButtonSmall:hover {
+  background-color: #ef931d;
+  cursor: pointer;
+}
 #title {
   font-family: 'Oswald', sans-serif;
   color: black;
@@ -103,13 +111,85 @@ body {
 
 .fa-instagram:hover {
   color: #be4a38;
+  cursor: pointer;
 }
 .fa-facebook-square:hover {
   color: #be4a38;
+  cursor: pointer;
 }
 
 .postBox:hover {
   border-style: solid;
   border-width: 5px;
   border-color: #ef931d;
+}
+
+.fa-plus-square:hover {
+  color: #ef931d;
+  cursor: pointer;
+}
+#userContainer {
+  display: none;
+  text-align: center;
+}
+
+.user {
+  background-color: #b64326;
+  border: solid;
+  border-color: #3a3a3c;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  width: 148px;
+  border-radius: 4px;
+  justify-content: space-between;
+  font-family: 'Oswald', sans-serif;
+}
+
+.user:hover {
+  border-color: #ef931d;
+  cursor: pointer;
+}
+
+#squareBoxSmall {
+  font-family: 'Oswald', sans-serif;
+  color: #b64326;
+}
+
+#settingsBox {
+  display: block;
+  text-align: center;
+}
+#slideBox {
+  display: none;
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 50%; /* Width of the outside container */
+  text-align: center;
+}
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #ef931d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.settingsText {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+
+#pleaseCenter {
+  display: inline-block;
+  text-align: center;
 }

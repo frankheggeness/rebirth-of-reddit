@@ -1,4 +1,8 @@
 @media only screen and (max-width: 424px) {
+  #footerBox {
+    display: none;
+  }
+
   .header {
     padding: 10px 16px;
     color: #f1f1f1;
@@ -6,6 +10,9 @@
     margin-right: 0%;
     top: 0px;
     background-color: white;
+    display: flex;
+    // align-items: flex-end;
+    justify-content: space-between;
   }
 
   #inputBoxBig {
@@ -15,16 +22,27 @@
     // align-self: flex-start;
     display: none;
   }
+  #inputBoxSmall {
+    height: 80px;
+    width: 150px;
+    // display: flex;
+    // align-self: flex-start;
+    // display: flex;
+  }
+
   #squareBox {
     display: none;
   }
   .fa-plus-square {
-    left: 90%;
-    position: absolute;
-    font-size: 2.5em;
+    // left: 90%;
+    // position: absolute;
+    font-size: 1.5em;
     color: #be4a38;
     // padding: 5px;
-    display: none;
+  }
+  #squareBoxSmall {
+    // display: flex;
+    // align-items: flex-start;
   }
   #navBox {
     background-color: #3a3a3c;
@@ -41,6 +59,7 @@
     }
     .navBar:hover {
       color: #e8562a;
+      cursor: pointer;
     }
   }
   .postBox {
@@ -64,8 +83,8 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 275px;
-        height: 175px;
+        width: 250px;
+        height: 150px;
       }
       .postStats {
         color: #b9b8b8;
@@ -77,9 +96,5 @@
         // max-height: 100px;
       }
     }
-  }
-
-  #footerBox {
-    display: none;
   }
 }
