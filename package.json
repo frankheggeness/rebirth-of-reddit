@@ -1,0 +1,25 @@
+{
+  "name": "rebirth-of-reddit",
+  "version": "1.0.0",
+  "description": "Super Awesome Co. has just been asked to concept a new Reddit theme. This is super last minute but we need to come up with a few concepts to propose to them by tomorrow. This could be huge for us and really put our shop on the map. We have to drop everything at once to hit this deadline.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankheggeness/rebirth-of-reddit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankheggeness/rebirth-of-reddit/issues"
+  },
+  "homepage": "https://github.com/frankheggeness/rebirth-of-reddit#readme",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "moment": "^2.24.0"
+  }
+}
