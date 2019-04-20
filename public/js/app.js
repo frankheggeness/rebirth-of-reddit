@@ -1,14 +1,8 @@
 'use strict';
 
-// import { brotliDecompressSync } from 'zlib';
-
-// var moment = require('moment');
-// moment().format();
-
 window.addEventListener('scroll', stickyFunc);
-// window.addEventListener('scroll', footerSticky);
-let currentSubreddit = '';
 
+let currentSubreddit = '';
 let header = document.getElementById('headerBox');
 let sticky = header.offsetTop;
 
@@ -27,18 +21,18 @@ function sendRequest(subreddit) {
     userContainer.style.display = 'none';
     let request = new XMLHttpRequest();
     currentSubreddit = subreddit;
-    // console.log(subreddit);
+    request.addEventListener('load', getData);
     request.open('GET', `https://www.reddit.com/r/${subreddit}/.json?raw_json=1`);
     request.send();
-    request.addEventListener('load', getData);
     postsBox.innerHTML = '';
   };
 }
+
 function sendRequestInfinite() {
   let request = new XMLHttpRequest();
+  request.addEventListener('load', getData);
   request.open('GET', `http://www.reddit.com/r/${currentSubreddit}/.json?limit=25&after=t3_10omtd/`);
   request.send();
-  request.addEventListener('load', getData);
 }
 
 // get data/create posts function below
@@ -46,12 +40,13 @@ function sendRequestInfinite() {
 function getData() {
   let responseData = JSON.parse(this.responseText);
   let responseChildren = responseData.data.children;
-  console.log(responseChildren);
+
   for (let i = 0; i < responseChildren.length; i++) {
     // create new postBox
     let newPost = document.createElement('div');
     newPost.className = 'postBox';
     postsBox.appendChild(newPost);
+
     let innerPostBox = document.createElement('div');
     innerPostBox.className = 'innerPostBox';
     newPost.appendChild(innerPostBox);
@@ -60,6 +55,7 @@ function getData() {
     // add image
     let postImage = document.createElement('img');
     postImage.className = 'postImages';
+
     if (
       imageLink.search('imgur') !== -1 ||
       responseChildren[i].data.thumbnail === '' ||
@@ -90,7 +86,6 @@ function getData() {
     let titleArray = title.split('');
     if (titleArray.length > 55) {
       let newTitle = title.substr(0, 55);
-      // postTitle.innerHTML = responseChildren[i].data.title;
       postTitle.innerHTML = newTitle + '...';
       innerPostBox.appendChild(postTitle);
     } else {
@@ -106,7 +101,6 @@ function getData() {
     let date = new Date(responseChildren[i].data.created * 1000);
     let newDateStr = date.toString();
     let newDate = newDateStr.substr(0, 15);
-    // let date = moment(responseChildren[i].data.created, 'YYYYMMDD');
     let upvotes = responseChildren[i].data.score;
     statsBox.innerHTML = `By : ${author} ●  ${newDate}  ● Upvotes: ${upvotes}`;
 
@@ -118,8 +112,6 @@ function getData() {
     if (fullParagraph !== '') {
       let reducedParagraph = fullParagraph.substr(0, 175);
       postContent.innerHTML = reducedParagraph + '...';
-      // postContent.innerHTML = fullParagraph;
-      // full contentstuff below
       fullPostContent.className = 'fullPostContent';
       fullPostContent.innerHTML = fullParagraph;
       fullPostContent.style.display = 'none';
@@ -135,6 +127,7 @@ function getData() {
 function showFull() {
   fullPostContent.style.display = 'block';
 }
+
 // add click event to nav bar
 
 surfNav.addEventListener('click', sendRequest('surfing'));
@@ -152,12 +145,9 @@ function randomSubRedditFunc() {
 // // endless scroll attempt
 window.onscroll = function(ev) {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    console.log('test');
     sendRequestInfinite();
   }
 };
-
-// function loadMore() {}
 
 // search function below
 let searchBarBig = document.getElementById('searchBarBig');
@@ -177,7 +167,6 @@ function searchFunctionSmall() {
 // user settings open
 
 let squareBox = document.getElementById('squareBox');
-
 squareBox.addEventListener('click', showUser);
 
 function showUser() {
@@ -186,12 +175,10 @@ function showUser() {
 }
 
 let closeButton = document.getElementById('closeButton');
-
 closeButton.addEventListener('click', showPosts);
 
 function showPosts() {
   userContainer.style.display = 'none';
-  // postsBox.innerHTML = '';
 }
 
 let squareBoxSmall = document.getElementById('squareBoxSmall');
@@ -223,6 +210,7 @@ function changeFontSize() {
     findContent[i].style.fontSize = `${slider.value}px`;
   }
 }
+
 backToSettings.addEventListener('click', backSetttings);
 
 function backSetttings() {
@@ -238,3 +226,5 @@ function switchBack() {
   document.body.style.backgroundImage =
     'url(https://previews.123rf.com/images/atomicchamp/atomicchamp1512/atomicchamp151200020/50324444-sun-and-cloud-background-with-a-pastel-colored-.jpg)';
 }
+
+sendRequest('surfing')();
