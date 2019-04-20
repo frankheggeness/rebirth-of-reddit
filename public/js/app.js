@@ -227,4 +227,4 @@ function switchBack() {
     'url(https://previews.123rf.com/images/atomicchamp/atomicchamp1512/atomicchamp151200020/50324444-sun-and-cloud-background-with-a-pastel-colored-.jpg)';
 }
 
-sendRequest('surfing')();
+window.onload = sendRequest('surfing');
