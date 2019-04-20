@@ -1,0 +1,96 @@
+@media only screen and (max-width: 1000px) and (min-width: 425px) {
+  .header {
+    padding: 10px 16px;
+    color: #f1f1f1;
+    margin-left: 0%;
+    margin-right: 0%;
+    top: 0px;
+    background-color: white;
+    display: flex;
+    // align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  #inputBoxBig {
+    height: 80px;
+    width: 150px;
+    // display: flex;
+    // align-self: flex-start;
+    display: none;
+  }
+  #inputBoxSmall {
+    height: 80px;
+    width: 150px;
+    // display: flex;
+    // align-self: flex-start;
+    // display: flex;
+  }
+
+  #squareBox {
+    display: none;
+  }
+  .fa-plus-square {
+    // left: 90%;
+    // position: absolute;
+    font-size: 1.5em;
+    color: #be4a38;
+    // padding: 5px;
+  }
+  #squareBoxSmall {
+    // display: flex;
+    // align-items: flex-start;
+  }
+  #navBox {
+    background-color: #3a3a3c;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Oswald', sans-serif;
+    color: #808184;
+
+    .navBar {
+      // border-width: 1px;
+      // border-left-style: solid;
+      // border-right-style: solid;
+      padding: 10px;
+    }
+    .navBar:hover {
+      color: #e8562a;
+      cursor: pointer;
+    }
+  }
+  .postBox {
+    background-color: white;
+    padding: 5px;
+    margin: 8px;
+    font-family: 'Lato', sans-serif;
+
+    // max-height: 100px;
+    // height: 400px;
+    .innerPostBox {
+      padding: 5px;
+      margin: 8px;
+      .postTitles {
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(41, 40, 40);
+        word-wrap: break-word;
+      }
+      .postImages {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 375px;
+        height: 225px;
+      }
+      .postStats {
+        color: #b9b8b8;
+        text-align: center;
+      }
+      .partPostContent {
+        text-overflow: auto;
+        word-wrap: break-word;
+        // max-height: 100px;
+      }
+    }
+  }
+}

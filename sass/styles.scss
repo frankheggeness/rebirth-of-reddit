@@ -1,0 +1,195 @@
+@import 'partials/_large';
+@import 'partials/_small';
+@import 'partials/_medium';
+
+.header {
+  padding: 10px 16px;
+  color: #f1f1f1;
+  margin-left: 0%;
+  margin-right: 0%;
+  top: 0px;
+  background-color: white;
+}
+
+#searchBarBig {
+  border: 2px solid #b64326;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-family: 'Oswald', sans-serif;
+}
+#searchBarSmall {
+  border: 2px solid #b64326;
+  border-radius: 4px;
+  padding: 5px 5px;
+  font-family: 'Oswald', sans-serif;
+}
+#searchButtonBig {
+  background-color: #b64326;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 148px;
+  border-radius: 4px;
+}
+#searchButtonSmall {
+  background-color: #b64326;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 148px;
+  border-radius: 4px;
+}
+#searchButtonBig:hover {
+  background-color: #ef931d;
+  cursor: pointer;
+}
+#searchButtonSmall:hover {
+  background-color: #ef931d;
+  cursor: pointer;
+}
+#title {
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBB%0D%0AZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9u%0D%0AOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBT%0D%0AVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzEx%0D%0ALmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3%0D%0ALnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxp%0D%0AbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTIwcHgiIGhlaWdodD0iNjBweCIgdmlld0Jv%0D%0AeD0iMCAwIDEyMCA2MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTIwIDYwIiB4bWw6c3Bh%0D%0AY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiM0MTQwNDIiIGQ9Ik0zMS45NiwxMS45%0D%0ANThoLTMuNDA5djEzLjYzNGgyLjcyN3YyLjA0NWgtMi43Mjd2MTkuMDg3aC0yLjcyN1Y5LjkxM2g2%0D%0ALjEzNlYxMS45NTh6Ii8+DQoJPHBhdGggZmlsbD0iIzQxNDA0MiIgZD0iTTQyLjU5NSw0Ni43MjVo%0D%0ALTIuNzI3bC0wLjM0MS04Ljg2MmgtMi4wMjRsLTAuMzYyLDguODYyaC0yLjcyN2wyLjA0NS0zNi44%0D%0AMTJoNC4wOUw0Mi41OTUsNDYuNzI1eg0KCQkgTTM5LjE4NiwyNy42MzhsLTAuNjgyLTE2LjM2MWwt%0D%0AMC42ODIsMTYuMzYxbC0wLjMyLDguMThoMi4wMjRMMzkuMTg2LDI3LjYzOHoiLz4NCgk8cGF0aCBm%0D%0AaWxsPSIjNDE0MDQyIiBkPSJNNTAuNTAyLDM3Ljc1NWMwLTEuNTA1LTAuMDc4LTIuNzk4LTAuMjM0%0D%0ALTMuODc3Yy0wLjE1Ni0xLjA4LTAuMzYxLTIuMDIxLTAuNjE2LTIuODIzDQoJCXMtMC41NTctMS40%0D%0AOTMtMC45MDYtMi4wN2MtMC4zNDktMC41NzctMC42ODctMS4xMzYtMS4wMTQtMS42NzdjLTAuMzI3%0D%0ALTAuNTQxLTAuNjUtMS4wNzUtMC45NjktMS42MDQNCgkJYy0wLjMyLTAuNTI4LTAuNjA3LTEuMTI3%0D%0ALTAuODYzLTEuNzk0Yy0wLjI1NS0wLjY2Ny0wLjQ2MS0xLjQzOC0wLjYxOC0yLjMxMnMtMC4yMzQt%0D%0AMS45Mi0wLjIzNC0zLjE0MnYtNS4xMzQNCgkJYzAtMC4zNDEsMC4wNTMtMC43MjgsMC4xNi0xLjE2%0D%0AMWMwLjEwNy0wLjQzMywwLjMwOS0wLjgzNywwLjYwNy0xLjIxNHMwLjcxMy0wLjY5NiwxLjI0Ni0w%0D%0ALjk1OQ0KCQljMC41MzMtMC4yNjMsMS4yMjUtMC4zOTQsMi4wNzctMC4zOTRzMS41NDQsMC4xMzEs%0D%0AMi4wNzcsMC4zOTRjMC41MzMsMC4yNjMsMC45NDgsMC41ODMsMS4yNDYsMC45NTlzMC41LDAuNzgx%0D%0ALDAuNjA3LDEuMjE0DQoJCWMwLjEwNiwwLjQzNCwwLjE2LDAuODIsMC4xNiwxLjE2MXY5LjU0NGgt%0D%0AMi43Mjd2LTkuNTQ0YzAtMC4zNDEtMC4wMzktMC42MjEtMC4xMTctMC44NDFzLTAuMTgxLTAuMzkx%0D%0ALTAuMzA5LTAuNTExDQoJCWMtMC4xMjgtMC4xMjEtMC4yNzQtMC4yMDYtMC40MzctMC4yNTZjLTAu%0D%0AMTYzLTAuMDQ5LTAuMzMtMC4wNzUtMC41LTAuMDc1cy0wLjMzNywwLjAyNS0wLjUsMC4wNzUNCgkJ%0D%0AYy0wLjE2NCwwLjA1LTAuMzA5LDAuMTM1LTAuNDM3LDAuMjU1Yy0wLjEyNywwLjEyMS0wLjIzMSww%0D%0ALjI5MS0wLjMwOSwwLjUxYy0wLjA3OSwwLjIyLTAuMTE3LDAuNS0wLjExNywwLjg0djQuMTQ2DQoJ%0D%0ACWMwLDEuNjAyLDAuMTM4LDIuOTQxLDAuNDE0LDQuMDE4YzAuMjc2LDEuMDc3LDAuNjIxLDIuMDE2%0D%0ALDEuMDM1LDIuODE3czAuODMzLDEuNTQyLDEuMjU2LDIuMjI0DQoJCWMwLjQyMywwLjY4MiwwLjg2%0D%0AMSwxLjM4OCwxLjMxMywyLjExOGMwLjQ1MywwLjczLDAuODA1LDEuNTk3LDEuMDU3LDIuNmMwLjI1%0D%0AMSwxLjAwMywwLjM3OCwyLjI1MiwwLjM3OCwzLjc0NXY4LjMyNA0KCQljMCwwLjE3MS0wLjAyMSww%0D%0ALjQ4LTAuMDY0LDAuOTI5cy0wLjE5MiwwLjkwNy0wLjQ0NywxLjM3NmMtMC4yNTYsMC40Ny0wLjY2%0D%0AMSwwLjg4Ni0xLjIxNCwxLjI0OQ0KCQljLTAuNTU0LDAuMzYzLTEuMzQyLDAuNTQ0LTIuMzY1LDAu%0D%0ANTQ0cy0xLjgxMS0wLjE4MS0yLjM2NS0wLjU0M3MtMC45NTgtMC43NzctMS4yMTQtMS4yNDZjLTAu%0D%0AMjU1LTAuNDY5LTAuNDA1LTAuOTI3LTAuNDQ3LTEuMzc0DQoJCXMtMC4wNjQtMC43NTctMC4wNjQt%0D%0AMC45MjdWMzEuMDQ2aDIuNzI3djEyLjI3MWMwLDAuMTcsMC4wMDcsMC4zNzMsMC4wMjEsMC42MDdz%0D%0AMC4wNjQsMC40NTgsMC4xNDksMC42NzENCgkJYzAuMDg1LDAuMjEzLDAuMjIsMC4zOTQsMC40MDUs%0D%0AMC41NDNjMC4xODQsMC4xNDksMC40NDcsMC4yMjQsMC43ODgsMC4yMjRzMC42MDQtMC4wNzQsMC43%0D%0AODgtMC4yMjRzMC4zMi0wLjMzLDAuNDA1LTAuNTQzDQoJCWMwLjA4NS0wLjIxMywwLjEzNS0wLjQz%0D%0ANywwLjE0OS0wLjY3MWMwLjAxNC0wLjIzNCwwLjAyMS0wLjQzOCwwLjAyMS0wLjYwN1YzNy43NTV6%0D%0AIi8+DQoJPHBhdGggZmlsbD0iIzQxNDA0MiIgZD0iTTYzLjg2NCw5LjkxM3YyLjA0NWgtMi43Mjd2%0D%0AMzQuNzY3aC0yLjcyN1YxMS45NThoLTIuNzI3VjkuOTEzSDYzLjg2NHoiLz4NCgk8cGF0aCBmaWxs%0D%0APSIjNDE0MDQyIiBkPSJNNzMuMTM2LDExLjk1OGgtMy40MDl2MTQuMzE2aDIuNzI2djIuMDQ1aC0y%0D%0ALjcyNlY0NC42OGgzLjQwOXYyLjA0NUg2N1Y5LjkxM2g2LjEzNlYxMS45NTh6Ii8+DQoJPHBhdGgg%0D%0AZmlsbD0iIzQxNDA0MiIgZD0iTTg0LjQ1MSw0Ni43MjVoLTIuNzI3bC0zLjQwOC0yNy4zMjF2Mjcu%0D%0AMzIxaC0yLjA0NVY5LjkxM2gyLjcyN2wzLjQwOCwyNy4zMjJWOS45MTNoMi4wNDVWNDYuNzI1eiIv%0D%0APg0KCTxwYXRoIGZpbGw9IiM0MTQwNDIiIGQ9Ik05NS43NjgsNDYuNzI1aC0yLjcyN0w5Mi43LDM3%0D%0ALjg2M2gtMi4wMjRsLTAuMzYxLDguODYyaC0yLjcyN2wyLjA0NS0zNi44MTJoNC4wOUw5NS43Njgs%0D%0ANDYuNzI1eg0KCQkgTTkyLjM1OSwyNy42MzhsLTAuNjgyLTE2LjM2MWwtMC42ODIsMTYuMzYxbC0w%0D%0ALjMyLDguMThIOTIuN0w5Mi4zNTksMjcuNjM4eiIvPg0KCTxwYXRoIGZpbGw9IiM0MTQwNDIiIGQ9%0D%0AIk0xMDYuMjU0LDkuOTEzdjIuMDQ1aC0yLjcyN3YzNC43NjdoLTIuNzI3VjExLjk1OGgtMi43MjhW%0D%0AOS45MTNIMTA2LjI1NHoiLz4NCgk8cGF0aCBmaWxsPSIjNDE0MDQyIiBkPSJNMTE1LjUyNSwxMS45%0D%0ANThoLTMuNDA5djE0LjMxNmgyLjcyN3YyLjA0NWgtMi43MjdWNDQuNjhoMy40MDl2Mi4wNDVoLTYu%0D%0AMTM3VjkuOTEzaDYuMTM3VjExLjk1OHoiLz4NCjwvZz4NCjxwb2x5Z29uIGZpbGw9IiNCNjQzMjYi%0D%0AIHBvaW50cz0iMTcuNTQ5LDEwLjU2MyAyLjcwMywxMC41NjMgMy44NDYsMTQuMTI1IDMuOTQxLDE0%0D%0ALjEyNSA0Ljk4OCwyNy4xMiA4LjUyOCwyNy4xMiAxMC4xMjUsNDguNTYzIA0KCTExLjcyMiwyNy4x%0D%0AMiAxNS4yNjMsMjcuMTIgMTYuMzExLDE0LjEyNSAxNi40MDYsMTQuMTI1ICIvPg0KPC9zdmc+DQo=);
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+body {
+  background-image: url(https://raw.githubusercontent.com/frankheggeness/rebirth-of-reddit/master/assets/bg.jpg);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+#footerBox {
+  // bottom: 0;
+  // background-color: #403641;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  // height: 20px; /* Height of the footer */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3a3a3c;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  color: #818285;
+}
+.postBox {
+  border: 5px solid transparent;
+}
+.fa-instagram {
+  margin: 3px;
+}
+.fa-facebook {
+  margin: 3px;
+}
+
+.fa-instagram:hover {
+  color: #be4a38;
+  cursor: pointer;
+}
+.fa-facebook-square:hover {
+  color: #be4a38;
+  cursor: pointer;
+}
+
+.postBox:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ef931d;
+}
+
+.fa-plus-square:hover {
+  color: #ef931d;
+  cursor: pointer;
+}
+#userContainer {
+  display: none;
+  text-align: center;
+}
+
+.user {
+  background-color: #b64326;
+  border: solid;
+  border-color: #3a3a3c;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  width: 148px;
+  border-radius: 4px;
+  justify-content: space-between;
+  font-family: 'Oswald', sans-serif;
+}
+
+.user:hover {
+  border-color: #ef931d;
+  cursor: pointer;
+}
+
+#squareBoxSmall {
+  font-family: 'Oswald', sans-serif;
+  color: #b64326;
+}
+
+#settingsBox {
+  display: block;
+  text-align: center;
+}
+#slideBox {
+  display: none;
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 50%; /* Width of the outside container */
+  text-align: center;
+}
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #ef931d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.settingsText {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+
+#pleaseCenter {
+  display: inline-block;
+  text-align: center;
+}
